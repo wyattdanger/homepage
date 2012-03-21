@@ -1,4 +1,7 @@
 require 'rubygems'
 require './site'
 
-run Sinatra::Application
+use Rack::Reloader, 1
+run PortfolioSite.new
+
+puts "GO"

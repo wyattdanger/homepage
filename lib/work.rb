@@ -1,4 +1,4 @@
-require 'yaml_reader'
+require File.dirname(__FILE__) + '/yaml_reader'
 
 WORK_DIRECTORY = "./data/work"
 
