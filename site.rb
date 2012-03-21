@@ -1,11 +1,21 @@
-require 'sinatra/base'
 require 'haml'
+require 'bourbon'
+require 'sinatra/base'
 require File.dirname(__FILE__) + '/lib/work'
 
 class PortfolioSite < Sinatra::Base
 
-  set :root, File.dirname(__FILE__)
-  set :views, File.dirname(__FILE__) + '/views'
+  dir = File.dirname(__FILE__)
+  set :root, dir
+  set :views, :sass => "#{dir}/views/sass", :default => "#{dir}/views"
+
+  helpers do
+    def find_template(views, name, engine, &block)
+      _, folder = views.detect { |k,v| engine == Tilt[k] }
+      folder ||= views[:default]
+      super(folder, name, engine, &block)
+    end
+  end
 
   get '/' do
     @work = Work.all
