@@ -15,9 +15,18 @@ describe PortfolioSite do
     PortfolioSite.new
   end
 
-  it "says hello" do
-    get "/"
-    last_response.status.should == 200
+  describe "/" do
+    it "returns 200" do
+      get "/"
+      last_response.status.should == 200
+    end
+  end
+
+  describe "/site.css" do
+    it "returns 200" do
+      get "/site.css"
+      last_response.status.should == 200
+    end
   end
 
 end

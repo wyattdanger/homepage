@@ -12,4 +12,9 @@ class PortfolioSite < Sinatra::Base
     haml :index
   end
 
+  get '/site.css' do
+    headers 'Content-Type' => 'text/css; charset=utf-8'
+    sass :stylesheet
+  end
+
 end
