@@ -3,5 +3,3 @@ require './site'
 
 use Rack::Reloader, 1
 run PortfolioSite.new
-
-puts "GO"
