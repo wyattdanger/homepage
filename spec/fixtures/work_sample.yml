@@ -1,3 +1,18 @@
 title: Work Sample
+
 description:
   This is a paragraph.
+
+roles:
+  - Role 1
+  - Role 2
+  - Another Role
+
+client: Your Mother
+
+completed: March 2012
+
+url: //stephenwyattbush.com
+
+desktop_image:
+mobile_image:

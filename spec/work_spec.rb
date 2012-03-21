@@ -3,8 +3,7 @@ require 'work'
 describe Work do
 
   before do
-    @data = YAML.load_file "./spec/fixtures/work_sample.yml"
-    @sample = Work.new @data
+    @sample = Work.new "./spec/fixtures/work_sample.yml"
   end
 
   context "from its configuration" do
@@ -13,6 +12,9 @@ describe Work do
     end
     it "fetches its description" do
       @sample.description.should_not be_nil
+    end
+    it "fetches an array of roles" do
+      @sample.roles.class.should be Array
     end
   end
 
