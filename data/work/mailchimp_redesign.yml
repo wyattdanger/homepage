@@ -1,1 +1,16 @@
 title: MailChimp Redesign
+
+summary:
+  When the website was being redesigned, we took the opportunity to completely rebuild the site from the ground up. We got rid of our content management system and opted instead for a static site generator, which allowed us to start working in HAML and SASS and building custom ruby helpers. Overall, it&rsquo;s been a massive improvement. The site has never been faster.
+
+desktop_image: http://allisonurban.com/images/portfolio/mailchimp.jpg
+
+url: http://mailchimp.com
+
+date: January 2011
+
+roles:
+  - Development Lead
+  - HTML5
+  - CSS3
+  - JavaScript

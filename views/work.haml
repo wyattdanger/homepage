@@ -1,1 +1,12 @@
 %h1 Work
+
+%ul
+  - @work.each do |work|
+    %li
+      %h2= work.title
+      %p= work.summary
+      %img{:src => work.desktop_image}
+      %h4 Roles
+      %ul
+        - work.roles.each do |role|
+          %li= role

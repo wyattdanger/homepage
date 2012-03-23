@@ -23,9 +23,11 @@ describe PortfolioSite do
   end
 
   describe "work page" do
-    it "returns 200" do
+    it "returns 200 at /work" do
       get "/work"
       last_response.status.should == 200
+    end
+    it "returns 200 at /work/" do
       get "/work/"
       last_response.status.should == 200
     end
