@@ -22,6 +22,15 @@ describe PortfolioSite do
     end
   end
 
+  describe "work page" do
+    it "returns 200" do
+      get "/work"
+      last_response.status.should == 200
+      get "/work/"
+      last_response.status.should == 200
+    end
+  end
+
   describe "site.css" do
     it "returns 200" do
       get "/site.css"

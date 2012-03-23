@@ -18,8 +18,12 @@ class PortfolioSite < Sinatra::Base
   end
 
   get '/' do
-    @work = Work.all
     haml :index
+  end
+
+  get '/work/?' do
+    @work = Work.all
+    haml :work
   end
 
   get '/site.css' do
