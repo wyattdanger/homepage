@@ -1,14 +1,13 @@
 %article
   .work-images
-    %img{:src => work.desktop_image}
-    %img{:src => work.mobile_image}
+    %img{:src => work.image_url}
   .work-description
     %h1= work.title
     %dl
       %dt Date Complete
       %dd= work.date
 
-      %dt Project Sumary
+      %dt Project Summary
       %dd= work.summary
 
       %dt Roles

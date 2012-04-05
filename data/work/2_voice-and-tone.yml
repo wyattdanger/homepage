@@ -3,9 +3,7 @@ title: Voice and Tone
 summary:
   ''
 
-desktop_image: https://s3.amazonaws.com/gimme-grabs-new/36AD320D-6BE6-4E7C-8AB9-C7168D7E8BF7
-
-mobile_image:
+image: voiceandtone.png
 
 url: http://voiceandtone.com
 
@@ -13,6 +11,7 @@ date: November 2011
 
 roles:
   - Ruby / Sinatra 
+  - Responsive Design
   - HTML5
   - CSS3
   - JavaScript/CoffeeScript

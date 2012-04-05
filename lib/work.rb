@@ -1,6 +1,7 @@
 require File.dirname(__FILE__) + '/yaml_reader'
 
 WORK_DIRECTORY = "./data/work"
+IMAGE_PREFIX = "/images/"
 
 class Work < YAMLReader
 
@@ -21,6 +22,10 @@ class Work < YAMLReader
 
   def slug
     @slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  end
+
+  def image_url
+    IMAGE_PREFIX + image
   end
 
   private
