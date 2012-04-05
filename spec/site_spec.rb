@@ -22,6 +22,7 @@ describe PortfolioSite do
     end
   end
 
+=begin
   describe "work#index" do
     it "returns 200 at /work" do
       get "/work"
@@ -40,6 +41,7 @@ describe PortfolioSite do
       last_response.status.should == 200
     end
   end
+=end
 
   describe "site.css" do
     it "returns 200" do

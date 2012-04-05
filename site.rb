@@ -26,9 +26,11 @@ class PortfolioSite < Sinatra::Base
   end
 
   get '/' do
+    @work = Work.all
     haml :index
   end
 
+=begin
   get '/work/?' do
     @work = Work.all
     haml :work_index
@@ -38,6 +40,7 @@ class PortfolioSite < Sinatra::Base
     @work = Work.find params[:slug]
     haml :work_show
   end
+=end
 
   get '/site.css' do
     headers 'Content-Type' => 'text/css; charset=utf-8'
