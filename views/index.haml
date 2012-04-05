@@ -1,4 +1,10 @@
 %h1 Welcome
+
+%ul.work
+  - @work.each do |work|
+    %li
+      = partial :work, :work => work
+
 :plain
   <div id="gr_custom_widget_1332734784">
   <div class="gr_custom_container_1332734784">
