@@ -7,10 +7,12 @@
 
 %body
   %header
-    %h1= link_to "Stephen Wyatt Bush, Web Developer", "/"
-    %nav
-      %ul
-        %li= link_to "Work", "/work/"
-        %li= link_to "Contact", "/contact/"
+    .content
+      %h1= link_to "Stephen Wyatt Bush, Web Developer", "/"
+      %nav
+        %ul
+          %li= link_to "Work", "/work/"
+          %li= link_to "Contact", "/contact/"
   %section
-    = yield
+    .content
+      = yield

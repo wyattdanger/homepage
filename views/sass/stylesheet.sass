@@ -4,16 +4,18 @@
 
 html
   background: #fafafa
-  border-top: 1rem solid #444
+  border-top: 1em solid #444
 
 a
   color: #555
 
 body
   font-family: "Average", Georgia, Serif
-  width: 80%%
-  margin: 0 auto
   color: #444
+
+.content
+  width: 90%
+  margin: 0 auto
 
 img
   max-width: 100%
@@ -21,9 +23,36 @@ img
 .sans
   font-family: "Signika Negative", "Helvetica", "Arial"
   
+@mixin font-scale($scale)
+  h1
+    font-size: 1.4em * $scale
+    font-weight: 700
+  h2
+    font-size: 1.2em * $scale
+    font-weight: 600
+  h3
+    font-size: 1.1em * $scale
+    font-weight: 500
+  h4
+    font-size: 1.0em * $scale
+    font-weight: 800
+  h5
+    font-size: 1.0em * $scale
+    font-weight: 600
+  h6
+    font-size: 1.0em * $scale
+    font-weight: 400
+  p
+    font-size: 1.0em * $scale
+    line-height: 1.32em
+
++font-scale(1)
+
 h1, h2, h3, h4, h5, h6
+  padding: 0
+  margin: 0
+  margin-bottom: 1em
   @extend .sans
-  font-weight: 600
   a
     text-decoration: none
 
@@ -37,7 +66,7 @@ h1
   @extend .sans
   background: #666
   color: #eee
-  padding: 1rem
+  padding: 1em
   display: inline-block
 
 .work-description
@@ -67,33 +96,53 @@ ul
 body::before
   content: '< 480px'
   position: absolute
-  top: 1rem
+  top: 1em
 
 @media only screen and (min-width: 480px)
   body::before
     content: '480px < 600px'
 
+  +font-scale(1.1)
+
 @media only screen and (min-width: 600px)
   body::before
     content: '600px < 768px'
 
+  +font-scale(1.1)
+
 @media only screen and (min-width: 768px)
   body::before
     content: '768px < 992px'
+
+  .content
+    width: 80%
+
   .unit
     float: left
 
+  .size1of2
+    width: 50%
   .size1of3
-    width: 38%
+    width: 37%
   .size2of3
-    width: 62%
+    width: 59%
+    margin-left: 4%
+
+  +font-scale(1.1)
 
 @media only screen and (min-width: 992px)
   body::before
     content: '992px < 1382px'
 
+  +font-scale(1.2)
+
 @media only screen and (min-width: 1382px)
   body::before
     content: '1382px <'
+
+  .content
+    width: 75%
+
+  +font-scale(1.4)
 
 @media print
