@@ -1,9 +1,9 @@
 %article
-  %h1= work.title
   .work-images
     %img{:src => work.desktop_image}
     %img{:src => work.mobile_image}
   .work-description
+    %h1= work.title
     %dl
       %dt Date Complete
       %dd= work.date

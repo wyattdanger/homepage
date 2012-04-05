@@ -15,6 +15,7 @@ body
 
 .content
   width: 90%
+  max-width: 1080px
   margin: 0 auto
 
 img
@@ -129,12 +130,16 @@ dl
       list-style: disc inside
 
 header
+  h1, h2
+    display: inline-block
   h1
     margin-top: 1em
+    margin-right: 1em
   a
     text-decoration: none
   .content
     border-bottom: 1px solid #ccc
+    margin-bottom: 2em
 
 /* NAV
 nav
@@ -149,27 +154,13 @@ ul
     line-height: 1.32em
     list-style-type: none
 
-body::before
-  content: '< 480px'
-  position: absolute
-  top: 1em
-
 @media only screen and (min-width: 480px)
-  body::before
-    content: '480px < 600px'
-
   +font-scale(1.1)
 
 @media only screen and (min-width: 600px)
-  body::before
-    content: '600px < 768px'
-
   +font-scale(1.1)
 
 @media only screen and (min-width: 768px)
-  body::before
-    content: '768px < 992px'
-
   .content
     width: 80%
 
@@ -187,15 +178,9 @@ body::before
   +font-scale(1.1)
 
 @media only screen and (min-width: 992px)
-  body::before
-    content: '992px < 1382px'
-
   +font-scale(1.2)
 
 @media only screen and (min-width: 1382px)
-  body::before
-    content: '1382px <'
-
   .content
     width: 75%
 
