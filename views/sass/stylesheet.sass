@@ -1,4 +1,58 @@
 @import bourbon/bourbon
+@import views/normalize
+
+html
+  background: #fafafa
+  border-top: 1rem solid #90C17B
+
+a
+  color: #368761
 
 body
-  background: #ccc
+  font-family: "Average", Georgia, Serif
+  width: 80%%
+  margin: 0 auto
+  color: #444
+
+img
+  max-width: 100%
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Signika Negative"
+  font-weight: 600
+h2, h3, h4, h5, h6
+  font-weight: 400
+h1
+  text-shadow: 1px 1px 0 #fff
+
+/* NAV
+nav
+  ul
+    list-style-type: none
+  a
+    text-decoration: none
+
+body::before
+  content: '< 480px'
+
+@media only screen and (min-width: 480px)
+  body::before
+    content: '480px < 600px'
+
+@media only screen and (min-width: 600px)
+  body::before
+    content: '600px < 768px'
+
+@media only screen and (min-width: 768px)
+  body::before
+    content: '768px < 992px'
+
+@media only screen and (min-width: 992px)
+  body::before
+    content: '992px < 1382px'
+
+@media only screen and (min-width: 1382px)
+  body::before
+    content: '1382px <'
+
+@media print
