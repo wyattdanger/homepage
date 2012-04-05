@@ -1,12 +1,13 @@
 @import bourbon/bourbon
-@import views/normalize
+@import views/sass/normalize
+
 
 html
   background: #fafafa
-  border-top: 1rem solid #90C17B
+  border-top: 1rem solid #444
 
 a
-  color: #368761
+  color: #555
 
 body
   font-family: "Average", Georgia, Serif
@@ -17,13 +18,38 @@ body
 img
   max-width: 100%
 
+.sans
+  font-family: "Signika Negative", "Helvetica", "Arial"
+  
 h1, h2, h3, h4, h5, h6
-  font-family: "Signika Negative"
+  @extend .sans
   font-weight: 600
+  a
+    text-decoration: none
+
 h2, h3, h4, h5, h6
   font-weight: 400
+
 h1
   text-shadow: 1px 1px 0 #fff
+
+.work-link
+  @extend .sans
+  background: #666
+  color: #eee
+  padding: 1rem
+  display: inline-block
+
+.work-description
+  @extend .unit
+  @extend .size1of3
+.work-images
+  @extend .unit
+  @extend .size2of3
+
+header
+  a
+    text-decoration: none
 
 /* NAV
 nav
@@ -32,8 +58,16 @@ nav
   a
     text-decoration: none
 
+ul
+  padding: 0
+  &.work
+    li
+      list-style-type: none
+
 body::before
   content: '< 480px'
+  position: absolute
+  top: 1rem
 
 @media only screen and (min-width: 480px)
   body::before
@@ -46,6 +80,13 @@ body::before
 @media only screen and (min-width: 768px)
   body::before
     content: '768px < 992px'
+  .unit
+    float: left
+
+  .size1of3
+    width: 38%
+  .size2of3
+    width: 62%
 
 @media only screen and (min-width: 992px)
   body::before
