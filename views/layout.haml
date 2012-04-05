@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 %body
-  %h1 Stephen Wyatt Bush, Web Developer
+  %h1= link_to "Stephen Wyatt Bush, Web Developer", "/"
   %nav
     %ul
-      %li= link_to "Work", "/work"
-      %li= link_to "Contact", "/contact"
+      %li= link_to "Work", "/work/"
+      %li= link_to "Contact", "/contact/"
   = yield

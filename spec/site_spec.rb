@@ -22,13 +22,21 @@ describe PortfolioSite do
     end
   end
 
-  describe "work page" do
+  describe "work#index" do
     it "returns 200 at /work" do
       get "/work"
       last_response.status.should == 200
     end
+
     it "returns 200 at /work/" do
       get "/work/"
+      last_response.status.should == 200
+    end
+  end
+
+  describe "work#show" do
+    it "returns 200 for a piece" do
+      get "/work/mailchimp-redesign"
       last_response.status.should == 200
     end
   end
