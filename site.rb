@@ -15,6 +15,10 @@ class PortfolioSite < Sinatra::Base
       folder ||= views[:default]
       super(folder, name, engine, &block)
     end
+
+    def link_to text, url="#", attrs={}
+      "<a href='#{url}'>#{text}</a>"
+    end
   end
 
   get '/' do
@@ -23,7 +27,12 @@ class PortfolioSite < Sinatra::Base
 
   get '/work/?' do
     @work = Work.all
-    haml :work
+    haml :work_index
+  end
+
+  get '/work/:slug/?' do
+    @work = Work.find params[:slug]
+    haml :work_show
   end
 
   get '/site.css' do
