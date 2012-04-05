@@ -1,13 +1,19 @@
 %article
-  .work-description
-    %h1= work.title
-    %time= work.date
-    %p= work.summary
-    %h4 Roles
-    %ul
-      - work.roles.each do |role|
-        %li= role
-    %p.work-link= link_to "Visit #{work.title}", work.url
+  %h1= work.title
   .work-images
     %img{:src => work.desktop_image}
     %img{:src => work.mobile_image}
+  .work-description
+    %dl
+      %dt Date Complete
+      %dd= work.date
+
+      %dt Project Sumary
+      %dd= work.summary
+
+      %dt Roles
+      %dd
+        %ul
+          - work.roles.each do |role|
+            %li= role
+    %p.work-link= link_to "Visit #{work.title}", work.url

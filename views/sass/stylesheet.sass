@@ -23,18 +23,32 @@ img
 .sans
   font-family: "Signika Negative", "Helvetica", "Arial"
   
+@mixin clear
+  &:after
+    clear: both
+    display: block
+    visibility: hidden
+    overflow: hidden
+    height: 0 !important
+    line-height: 0
+    font-size: xx-large
+    content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x "
+
+.line
+  +clear
+
 @mixin font-scale($scale)
   h1, .h1
     font-size: 1.4em * $scale
-    font-weight: 700
+    font-weight: 500
   h2, .h2
-    font-size: 1.2em * $scale
-    font-weight: 600
+    font-size: 1.3em * $scale
+    font-weight: 500
   h3, .h3
-    font-size: 1.1em * $scale
+    font-size: 1.2em * $scale
     font-weight: 500
   h4, .h4
-    font-size: 1.0em * $scale
+    font-size: 1.1em * $scale
     font-weight: 800
   h5, .h5
     font-size: 1.0em * $scale
@@ -42,11 +56,33 @@ img
   h6, .h6
     font-size: 1.0em * $scale
     font-weight: 400
+  article h1, .h1
+    font-size: 1.2em * $scale
+  article h2, .h2
+    font-size: 1.1em * $scale
+  article h3, .h3
+    font-size: 1.0em * $scale
+  article h4, .h4
+    font-size: 1.0em * $scale
+  article h5, .h5
+    font-size: 1.0em * $scale
+  article h6, .h6
+    font-size: 1.0em * $scale
   p
     font-size: 1.0em * $scale
     line-height: 1.32em
 
 +font-scale(1)
+
+ul.work
+  article
+    +clear
+    margin-bottom: 2em
+    padding-bottom: 1em
+    border-bottom: 1px solid #ccc
+
+time
+  display: block
 
 h1, h2, h3, h4, h5, h6
   padding: 0
@@ -76,11 +112,29 @@ h1
   @extend .unit
   @extend .size2of3
 
+dl
+  margin: 0
+  padding: 0
+  line-height: 1.32em
+  dt
+    margin: 0
+    padding: 0
+    color: #999
+    @extend .sans
+  dd
+    margin: 0
+    padding: 0
+    margin-bottom: 1em
+    ul li
+      list-style: disc inside
+
 header
   h1
     margin-top: 1em
   a
     text-decoration: none
+  .content
+    border-bottom: 1px solid #ccc
 
 /* NAV
 nav
@@ -126,9 +180,9 @@ body::before
     width: 50%
   .size1of3
     width: 37%
+    margin-left: 4%
   .size2of3
     width: 59%
-    margin-left: 4%
 
   +font-scale(1.1)
 

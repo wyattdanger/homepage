@@ -1,14 +1,16 @@
-%h1 Welcome
+.line
+  %h2#work Work
+  %ul.work
+    - @work.each do |work|
+      %li
+        = partial :work, :work => work
 
-%h2#work Work
-%ul.work
-  - @work.each do |work|
-    %li
-      = partial :work, :work => work
+.line
+  = partial :about
 
-= partial :about
+.line
+  = partial :speaking
 
-= partial :speaking
-
-= partial :reading
+.line
+  = partial :reading
 
