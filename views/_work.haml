@@ -1,13 +1,13 @@
 %article
   .work-description
     %h1= work.title
-    %h2.h4= link_to work.url, work.url
     %time= work.date
     %p= work.summary
     %h4 Roles
     %ul
       - work.roles.each do |role|
         %li= role
+    %p.work-link= link_to "Visit #{work.title}", work.url
   .work-images
     %img{:src => work.desktop_image}
     %img{:src => work.mobile_image}
