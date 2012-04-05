@@ -1,0 +1,15 @@
+title: FSG Bank
+
+summary: The FSGBank site is a significant improvement in usability and functionality over their previous website. The incorporation of interactive Google maps and product carousels eases customer product use.
+
+desktop_image: http://stephenwyattbush.com/media/images/fsgbank.png
+
+mobile_image:
+
+url: http://fsgbank.com 
+
+date: 2010
+
+roles:
+  - Python Backend
+  - HTML, CSS, JavaScript Frontend
