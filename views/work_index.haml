@@ -3,4 +3,4 @@
 %ul
   - @work.each do |work|
     %li
-      != haml :_work, :locals => { :work => work }
+      = partial :work, :work => work
