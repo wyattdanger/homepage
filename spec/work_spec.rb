@@ -37,4 +37,26 @@ describe Work do
     end
   end
 
+  context "slug" do
+    it "has a slug" do
+      @sample.slug.should eq "work-sample"
+    end
+  end
+
+  context "self.find" do
+    it "returns a work item by slug" do
+      Work.find('mailchimp-redesign').should be_a Work
+    end
+
+    it "returns a work item by slug" do
+      Work.find('mailchimp-redesign').title.should eq "MailChimp Redesign"
+    end
+
+    it "throws an error if no work found" do
+      lambda { 
+        Work.find('comcast-redesign')
+      }.should raise_error Work::WorkNotFoundException
+    end
+  end
+
 end
