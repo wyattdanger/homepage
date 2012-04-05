@@ -1,2 +1,14 @@
-%h1 Stephen Wyatt Bush
-= yield
+!!! 5
+%head
+  :plain
+    <link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,600|Average' rel='stylesheet' type='text/css'>
+    <link href='/site.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+%body
+  %h1 Stephen Wyatt Bush, Web Developer
+  %nav
+    %ul
+      %li= link_to "Work", "/work"
+      %li= link_to "Contact", "/contact"
+  = yield
