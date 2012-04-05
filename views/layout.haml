@@ -9,8 +9,13 @@
 %body
   %header
     .content
-      %h1 Stephen Wyatt Bush
-      %h2.h4.caps Web Developer
+      %hgroup
+        %h1 Stephen Wyatt Bush
+        %h2 Web Developer
+      %nav
+        %ul
+          %li= link_to "About", "#about"
+          %li= link_to "Blog", "//blog.stephenwyattbush.com"
   %section
     .content
       = yield

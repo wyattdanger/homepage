@@ -4,7 +4,7 @@
 
 html
   background: #fafafa
-  border-top: 1em solid #444
+  border-top: .618em solid #444
 
 a
   color: #555
@@ -71,7 +71,7 @@ img
     font-size: 1.0em * $scale
   p
     font-size: 1.0em * $scale
-    line-height: 1.32em
+    line-height: 1.618em
 
 +font-scale(1)
 
@@ -116,7 +116,7 @@ h1
 dl
   margin: 0
   padding: 0
-  line-height: 1.32em
+  line-height: 1.618em
   dt
     margin: 0
     padding: 0
@@ -137,12 +137,27 @@ header
     display: inline-block
   h1
     margin-top: 1em
+    margin-bottom: 0
     margin-right: 1em
+  h2
+    @extend h4
+    text-transform: uppercase
+    margin: 0.618em 0
   a
     text-decoration: none
   .content
-    border-bottom: 1px solid #ccc
+    +clear
     margin-bottom: 2em
+    border-bottom: 1px solid #ccc
+
+  nav
+    @extend .sans
+    ul
+      margin-top: 0
+      +clear
+    li
+      float: left
+      margin-right: 1.618em
 
 /* NAV
 nav
@@ -165,7 +180,7 @@ ul
 
 @media only screen and (min-width: 768px)
   .content
-    width: 80%
+    width: 85%
 
   .unit
     float: left
@@ -178,6 +193,27 @@ ul
   .size2of3
     width: 59%
 
+  ul.work
+    article
+      margin-bottom: 3em
+      padding-bottom: 3em
+
+  hgroup, nav
+    float: left
+
+  header hgroup
+    width: 59%
+
+  header nav
+    width: 37%
+    margin-left: 4%
+    @extend .sans
+    li
+      float: left
+      padding-top: 2em
+      margin-right: 1.618em
+
+
   +font-scale(1.1)
 
 @media only screen and (min-width: 992px)
@@ -186,6 +222,11 @@ ul
 @media only screen and (min-width: 1382px)
   .content
     width: 75%
+
+  html
+    border-top: 1em solid #444
+  header nav li
+    padding-top: 2.32em
 
   +font-scale(1.4)
 
