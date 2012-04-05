@@ -12,6 +12,7 @@ url: http://voiceandtone.com
 date: November 2011
 
 roles:
+  - Ruby / Sinatra 
   - HTML5
   - CSS3
   - JavaScript/CoffeeScript
