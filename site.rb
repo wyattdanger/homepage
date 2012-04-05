@@ -16,7 +16,7 @@ class PortfolioSite < Sinatra::Base
       super(folder, name, engine, &block)
     end
 
-    def partial filename, locals
+    def partial filename, locals={}
       haml "_#{filename}".intern, :locals => locals
     end
 
