@@ -1,7 +1,7 @@
 title: UTC Art Department
 
 summary:
-  As a design student at The University of Tennessee at Chattanooga (UTC), I co-redesigned the Art Department website. As an engineer at Medium, I developed new Art Department site on a Python-based web framework. The site maintains a clean and minimal aesthetic. Courses, departments and faculty all have unique profiles.
+  As a design student at The University of Tennessee at Chattanooga (UTC), I co-redesigned the Art Department website. As a developer at Medium, I built new Art Department site on <a href="http://messagecms.com/">MessageCMS</a>, a Python-based web framework. The site maintains a clean and minimal aesthetic. Courses, departments and faculty all have unique profiles.
 
 image: utcart.png
 

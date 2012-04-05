@@ -1,7 +1,7 @@
 title: MailChimp Redesign
 
 summary:
-  When the website was being redesigned, we took the opportunity to completely rebuild the site from the ground up. We got rid of our content management system and opted instead for a static site generator, which allowed us to start working in HAML and SASS and building custom ruby helpers. Overall, it&rsquo;s been a massive improvement. The site has never been faster.
+  When the MailChimp marketing website was redesigned, I rebuilt the site from the ground up. The site moved from Expression Engine to Frank, a Ruby-based static site generator. The site receives over 200,000 page views each day, and the front-end is optimized to ensure great performance.
 
 image: mailchimp.png
 

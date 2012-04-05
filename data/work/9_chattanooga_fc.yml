@@ -1,7 +1,7 @@
 title: Chattanooga Football Club
 
 summary:
-  The Chattanooga FC (CFC) site makes use of reusable widgets and allows CFC to manage custom profiles, schedules, news and products.
+  The Chattanooga FC (CFC) site is built on <a href="http://messagecms.com/">MessageCMS</a> in Python. It makes use of reusable widgets and allows CFC to manage custom profiles, schedules, news and products. 
 
 image: cfc.png
 
