@@ -14,5 +14,8 @@
       %dd
         %ul
           - work.roles.each do |role|
-            %li= role
+            %li
+              %span
+                &#8226;
+              = role
     %p.work-link= link_to "Visit #{work.title}", work.url
