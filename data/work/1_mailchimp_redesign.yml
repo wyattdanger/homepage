@@ -1,7 +1,7 @@
 title: MailChimp Redesign
 
 summary:
-  When the MailChimp marketing website was redesigned, I rebuilt the site from the ground up. The site moved from Expression Engine to Frank, a Ruby-based static site generator. The site receives over 200,000 page views each day, and the front-end is optimized to ensure great performance.
+  When the MailChimp marketing website was redesigned, I rebuilt the site from the ground up. The site moved from Expression Engine to a Ruby-based static site generator. The site receives over 200,000 page views each day, and the front-end is optimized to ensure great performance.
 
 image: mailchimp.png
 

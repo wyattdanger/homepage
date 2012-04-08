@@ -1,7 +1,7 @@
 title: Voice and Tone
 
 summary:
-  Voice and Tone is MailChimp's internal guide to maintaining a consistent tone in writing. The site is built on Sintra, and it takes advantage of AJAX and HTML5 PushState to create a smooth browsing experience. I used CSS3 media queries to create a mobile phone optimized version of the site. 
+  Voice and Tone is MailChimp&rsquo;s internal guide to maintaining a consistent tone in writing. The site is built on Sintra, and it takes advantage of AJAX and HTML5 PushState to create a smooth browsing experience. I used CSS3 media queries to create a mobile phone optimized version of the site. 
 
 image: voiceandtone.png
 
