@@ -1,9 +1,9 @@
 require File.dirname(__FILE__) + '/yaml_reader'
 
-WORK_DIRECTORY = "./data/work"
-IMAGE_PREFIX = "/images/"
-
 class Work < YAMLReader
+
+  WORK_DIRECTORY = "./data/work"
+  IMAGE_PREFIX = "/images/"
 
   class WorkNotFoundException < Exception; end
 

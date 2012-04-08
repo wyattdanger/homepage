@@ -1,0 +1,5 @@
+books:
+  - title: "Objects on Rails"
+    url: "http://objectsonrails.com/"
+  - title: "Metaprogramming Ruby: Program Like the Ruby Pros"
+    url: "http://pragprog.com/book/ppmetr/metaprogramming-ruby"

@@ -2,6 +2,7 @@ require 'haml'
 require 'bourbon'
 require 'sinatra/base'
 require File.dirname(__FILE__) + '/lib/work'
+require File.dirname(__FILE__) + '/lib/currently_reading'
 
 class PortfolioSite < Sinatra::Base
 
@@ -27,6 +28,7 @@ class PortfolioSite < Sinatra::Base
 
   get '/' do
     @work = Work.all
+    @reading = CurrentlyReading.new
     haml :index
   end
 
