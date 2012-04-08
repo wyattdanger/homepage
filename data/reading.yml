@@ -3,3 +3,7 @@ books:
     url: "http://objectsonrails.com/"
   - title: "Metaprogramming Ruby: Program Like the Ruby Pros"
     url: "http://pragprog.com/book/ppmetr/metaprogramming-ruby"
+  - title: "The Passionate Programmer"
+    url: "http://pragprog.com/book/cfcar2/the-passionate-programmer"
+  - title: "Eloquent JavaScript"
+    url: "http://eloquentjavascript.net/"
