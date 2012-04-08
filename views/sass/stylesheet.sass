@@ -23,6 +23,9 @@ img
 
 .sans
   font-family: "Signika Negative", "Helvetica", "Arial"
+
+.pub
+  font-style: italic
   
 @mixin clear
   &:after
@@ -75,12 +78,16 @@ img
 
 +font-scale(1)
 
+hr
+  border: none
+  border-bottom: 1px solid #ccc
+  margin-bottom: 2em
+  padding-bottom: 1em
+
 ul.work
   article
     +clear
-    margin-bottom: 2em
-    padding-bottom: 1em
-    border-bottom: 1px solid #ccc
+    @extend hr
 
 time
   display: block
@@ -172,6 +179,12 @@ ul
     line-height: 1.32em
     list-style-type: none
 
+.widget
+  margin-bottom: 2em
+  @extend hr
+  h2
+    margin-bottom: 0
+
 @media only screen and (min-width: 480px)
   +font-scale(1.1)
 
@@ -179,6 +192,13 @@ ul
   +font-scale(1.1)
 
 @media only screen and (min-width: 768px)
+
+  .widget
+    h2
+      margin-bottom: 0
+    p
+      width: 59%
+
   .content
     width: 85%
 
@@ -193,10 +213,9 @@ ul
   .size2of3
     width: 59%
 
-  ul.work
-    article
-      margin-bottom: 3em
-      padding-bottom: 3em
+  hr
+    margin-bottom: 3em
+    padding-bottom: 2em
 
   hgroup, nav
     float: left
