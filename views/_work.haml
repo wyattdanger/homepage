@@ -1,6 +1,7 @@
 %article
   .work-images
-    %img{:src => work.image_url}
+    %a{:href => work.url}
+      %img{:src => work.image_url}
   .work-description
     %h1= work.title
     %dl
