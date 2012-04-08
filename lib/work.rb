@@ -31,7 +31,7 @@ class Work < YAMLReader
   private
 
   def self.all_files
-    @all_files ||= Dir.glob "#{ WORK_DIRECTORY }/*.yml"
+    @all_files ||= Dir.glob("#{ WORK_DIRECTORY }/*.yml").sort
   end
 
 end
