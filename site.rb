@@ -28,7 +28,7 @@ class PortfolioSite < Sinatra::Base
 
   get '/' do
     @work = Work.all
-    @reading = CurrentlyReading.new
+    @reading = CurrentlyReading.all
     haml :index
   end
 

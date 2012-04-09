@@ -11,6 +11,10 @@ class CurrentlyReading < YAMLReader
     @booklist ||= books.map {|b| Book.new b }
   end
 
+  def self.all
+    new
+  end
+
   class Book < OpenStruct
   end
 
